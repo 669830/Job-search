@@ -58,7 +58,7 @@ function reset(){
 }
 
 const isValid =
-    profile.education && profile.experince && profile.skills.length > 0;
+    profile.education && profile.experience && profile.skills.length > 0;
 
     return{
         profile, jobs, loading, error, submitted, isValid,

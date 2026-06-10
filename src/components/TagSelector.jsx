@@ -16,7 +16,7 @@ export default function TagSelector({options, selected, onToggle}){
                         fontFamily: "inherit",
                     }}
                 >
-                    {opt.label}
+                    {opt}
                 </button>
             ))}
         </div>

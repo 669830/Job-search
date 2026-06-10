@@ -10,4 +10,4 @@ export const WORK_PREFERENCES = [
   "Remote", "On-site", "Hybrid",
   "Full-time", "Part-time", "Freelance",
   "Startup", "Corporate", "Non-profit",
-];
+];  
