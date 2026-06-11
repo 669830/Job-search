@@ -2,11 +2,11 @@
 
 En AI-drevet jobbanbefaling-app bygget med React og Anthropic Claude API.
 
-Fyll inn profilen din — ferdigheter, utdanning, erfaring og preferanser — og få personlige jobbforslag med direkte lenker til stillinger på FINN.no.
+Fyll inn profilen din med ferdigheter, utdanning, erfaring og preferanser  og få personlige jobbforslag med direkte lenker til stillinger på FINN.no.
 
 ## Funksjoner
 
-- Profilskjema med klikkbare ferdighets- og preferansetagger
+- Profilskjema med klikkbare ferdighets og preferansetagger
 - AI-drevet jobbmatching via Claude API
 - Hvert resultat lenker direkte til FINN.no jobbsøk
 - Rent og responsivt design
