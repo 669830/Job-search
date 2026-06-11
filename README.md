@@ -1,16 +1,80 @@
-# React + Vite
+# Jobbfinner 🔍
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+En AI-drevet jobbanbefaling-app bygget med React og Anthropic Claude API.
 
-Currently, two official plugins are available:
+Fyll inn profilen din — ferdigheter, utdanning, erfaring og preferanser — og få personlige jobbforslag med direkte lenker til stillinger på FINN.no.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Funksjoner
 
-## React Compiler
+- Profilskjema med klikkbare ferdighets- og preferansetagger
+- AI-drevet jobbmatching via Claude API
+- Hvert resultat lenker direkte til FINN.no jobbsøk
+- Rent og responsivt design
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Teknologi
 
-## Expanding the ESLint configuration
+- React + Vite
+- Anthropic Claude API
+- CSS Modules
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Kom i gang
+
+### 1. Klon repoet
+
+```bash
+git clone https://github.com/669830/Job-search.git
+cd Job-search
+```
+
+### 2. Installer avhengigheter
+
+```bash
+npm install
+```
+
+### 3. Legg til API-nøkkel
+
+Opprett en `.env`-fil i rotmappen:
+
+```
+VITE_ANTHROPIC_API_KEY=din_api_nøkkel_her
+```
+
+Hent API-nøkkelen din på https://console.anthropic.com
+
+### 4. Start appen
+
+```bash
+npm run dev
+```
+
+Åpne http://localhost:5173
+
+## Prosjektstruktur
+
+```
+src/
+├── components/
+│   ├── JobCard.jsx        # Jobbkort med lenke til FINN.no
+│   ├── ProfileForm.jsx    # Profilskjema
+│   ├── Results.jsx        # Resultatvisning
+│   └── TagSelector.jsx    # Gjenbrukbar tagger-komponent
+├── data/
+│   └── options.js         # Ferdigheter og preferanser
+├── hooks/
+│   └── useJobFinder.js    # Tilstand og logikk
+├── utils/
+│   └── api.js             # Claude API-kall
+└── App.jsx
+```
+
+## Veikart
+
+- Fase 2: Legg til Node.js/Express backend + PostgreSQL database
+- Lagre og gjenbesøk tidligere jobbforslag
+- Hent norske stillinger direkte fra Arbeidsplassen.nav.no
+- Brukerkontoer og innlogging
+
+## Lisens
+
+MIT
