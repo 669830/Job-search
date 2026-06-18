@@ -1,4 +1,4 @@
-# Jobbfinner 🔍
+# Jobbfinner 
 
 En AI-drevet jobbanbefaling-app bygget med React og Anthropic Claude API.
 

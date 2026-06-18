@@ -21,7 +21,7 @@ export default function Results({ jobs, loading, error, name, onReset }) {
   return (
     <div>
       <h2 style={{ fontSize: "18px", fontWeight: "500", marginBottom: "1rem" }}>
-        Your top job matches{name ? `, ${name}` : ""}
+        Jobber som passer deg{name ? `, ${name}` : ""}
       </h2>
 
       {jobs.map((job, i) => (
@@ -41,7 +41,7 @@ export default function Results({ jobs, loading, error, name, onReset }) {
           fontSize: "13px",
         }}
       >
-        ← Start over
+        Start over
       </button>
     </div>
   );

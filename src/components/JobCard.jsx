@@ -61,6 +61,23 @@ export default function JobCard({ job }) {
       >
         Søk på FINN.no
       </a>
+      <a
+        href={`https://arbeidsplassen.nav.no/stillinger?q=${encodeURIComponent(job.title)}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          display: "inline-block",
+          marginTop: "12px",
+          padding: "6px 14px",
+          background: "#111",
+          color: "#fff",
+          borderRadius: "8px",
+          fontSize: "13px",
+          textDecoration: "none",
+        }}
+      >
+        Søk på Arbeidsplassen
+      </a>
     </div>
   );
 }
