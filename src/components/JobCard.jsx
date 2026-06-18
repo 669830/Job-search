@@ -59,7 +59,7 @@ export default function JobCard({ job }) {
           textDecoration: "none",
         }}
       >
-        Søk på FINN.no →
+        Søk på FINN.no
       </a>
     </div>
   );

@@ -4,7 +4,7 @@ export default function Results({ jobs, loading, error, name, onReset }) {
   if (loading) {
     return (
       <div style={{ textAlign: "center", padding: "3rem", color: "#888" }}>
-        <p>Finding your best job matches...</p>
+        <p>Finnder jobber som passer deg...</p>
       </div>
     );
   }

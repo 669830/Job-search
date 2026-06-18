@@ -1,5 +1,6 @@
 const CLAUDE_API_URL = 'https://api.anthropic.com/v1/messages';
 const API_KEY = import.meta.env.VITE_ANTHROPIC_API_KEY;
+const BACKEND_URL = 'http://localhost:3000';
 
 export async function fetchJobSuggestions(profile){
     const {name, education, experience, skills, preferences, interest, extra} = profile;
@@ -40,4 +41,26 @@ const data = await response.json();
 const text = data.content.map((i) => i.text || "").join("");
 const clean = text.replace(/```json|```/g, "").trim();
 return JSON.parse(clean);
+}
+
+export async function saveProfile(profile){
+    const response = await fetch(`${BACKEND_URL}/profiles`,{
+        method: 'POST',
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(profile),
+    });
+    if (!response.ok) throw new Error('Kunne ikke lagre profil');
+    return response.json();
+}
+
+export async function saveJobs(profileId, jobs) {
+  const response = await fetch(`${BACKEND_URL}/profiles/${profileId}/jobs`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(jobs),
+  });
+  if (!response.ok) throw new Error('Kunne ikke lagre jobber');
+  return response.json();
 }
