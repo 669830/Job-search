@@ -7,7 +7,7 @@ export const SKILLS = [
 ];
 
 export const WORK_PREFERENCES = [
-  "Remote", "On-site", "Hybrid",
-  "Full-time", "Part-time", "Freelance",
-  "Startup", "Corporate", "Non-profit",
+  "Hjemmekontor", "På kontoret", "Hybrid",
+  "Heltid", "Deltid", "Frilans",
+  "Oppstartsbedrift", "Storselskap", "Ideell organisasjon",
 ];  
